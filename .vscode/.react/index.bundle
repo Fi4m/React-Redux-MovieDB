@@ -62621,7 +62621,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             screen: _MovieDetails2.default
         }
     });
-},528,[529,112,12,605,613,614,619],"src/Router.js");
+},528,[529,112,12,605,613,614,620],"src/Router.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = {
     get createNavigationContainer() {
@@ -75818,7 +75818,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     exports.default = (0, _reactRedux.connect)(mapStateToProps, {
         fetchMovieCredits: _actions.fetchMovieCredits
     })(MovieDetails);
-},614,[112,131,12,615,505,606,607,620],"src/components/MovieDetails.js");
+},614,[112,131,12,615,505,606,607,619],"src/components/MovieDetails.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   'use strict';
 
@@ -76535,18 +76535,6 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   });
 },618,[329],"node_modules/react-native-stars/example-images/starEmpty.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
-  module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
-    "__packager_asset": true,
-    "httpServerLocation": "/assets/src/Images",
-    "width": 64,
-    "height": 64,
-    "scales": [1],
-    "hash": "51ebdd7772e0155f103a1cac78de089b",
-    "name": "menu",
-    "type": "png"
-  });
-},619,[329],"src/Images/menu.png");
-__d(function (global, _require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
@@ -76571,15 +76559,25 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                 }
             },
             _react2.default.createElement(
-                _reactNative.Text,
+                _reactNative.View,
                 {
-                    style: styles.titleText,
+                    style: styles.titleContainer,
                     __source: {
                         fileName: _jsxFileName,
                         lineNumber: 7
                     }
                 },
-                props.title
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    {
+                        style: styles.titleText,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 10
+                        }
+                    },
+                    props.title
+                )
             ),
             _react2.default.createElement(
                 _reactNative.Text,
@@ -76587,7 +76585,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                     style: styles.detailText,
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 10
+                        lineNumber: 15
                     }
                 },
                 props.detail
@@ -76598,15 +76596,18 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     var styles = {
         container: {
             flexDirection: 'row',
+            alignItems: 'stretch',
             borderWidth: 0.5,
             borderColor: '#bbbbbb'
         },
-        titleText: {
+        titleContainer: {
             flex: 4,
             backgroundColor: '#cccccc',
+            flexDirection: 'row'
+        },
+        titleText: {
             padding: 10,
-            alignSelf: 'center',
-            width: '100%'
+            alignSelf: 'center'
         },
         detailText: {
             flex: 6,
@@ -76615,6 +76616,18 @@ __d(function (global, _require, module, exports, _dependencyMap) {
         }
     };
     exports.default = MovieCreditsItem;
-},620,[112,12],"src/components/MovieCreditsItem.js");
+},619,[112,12],"src/components/MovieCreditsItem.js");
+__d(function (global, _require, module, exports, _dependencyMap) {
+  module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/src/Images",
+    "width": 64,
+    "height": 64,
+    "scales": [1],
+    "hash": "51ebdd7772e0155f103a1cac78de089b",
+    "name": "menu",
+    "type": "png"
+  });
+},620,[329],"src/Images/menu.png");
 require(23);
 require(11);//# sourceMappingURL=index.map
